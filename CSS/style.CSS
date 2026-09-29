@@ -332,64 +332,30 @@ header .bottom_header .login_signup {
     border-radius: 12px;
 }
 
-.hero input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.slides {
-    display: flex;
-    width: 300%;
-    transition: transform 0.6s ease;
-}
-
-.slide {
-    width: 33.333333%;
-    flex-shrink: 0;
-}
-
-.slide img {
+.hero .swiper-slide img {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 6;
     object-fit: cover;
 }
 
-#slide1:checked ~ .slides {
-    transform: translateX(0);
+.hero .swiper-pagination {
+    position: static;
+    padding: 14px 0 2px;
 }
 
-#slide2:checked ~ .slides {
-    transform: translateX(-33.333333%);
-}
-
-#slide3:checked ~ .slides {
-    transform: translateX(-66.666666%);
-}
-
-.slider_controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.slider_controls label {
+.hero .swiper-pagination-bullet {
     width: 11px;
     height: 11px;
     background: #c9d9d7;
-    border-radius: 50%;
-    cursor: pointer;
+    opacity: 1;
     transition: 0.3s;
 }
 
-#slide1:checked ~ .slider_controls label:nth-child(1),
-#slide2:checked ~ .slider_controls label:nth-child(2),
-#slide3:checked ~ .slider_controls label:nth-child(3) {
-    background: var(--main-color);
+.hero .swiper-pagination-bullet-active {
     width: 28px;
     border-radius: 10px;
+    background: var(--main-color);
 }
 .features {
     padding: 20px 0;
